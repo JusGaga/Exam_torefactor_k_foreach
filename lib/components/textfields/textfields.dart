@@ -14,11 +14,15 @@ TextField reusableTextField(String label, IconData icon, bool isPasswordType,
       labelText: label,
       labelStyle: TextStyle(color: Colors.white.withOpacity(0.9)),
       filled: true,
-      floatingLabelBehavior: FloatingLabelBehavior.never,
-      fillColor: Colors.white.withOpacity(0.7),
-      border: OutlineInputBorder(
+      fillColor: Colors.black.withOpacity(0.1),
+      focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8.0),
-          borderSide: const BorderSide(width: 0, style: BorderStyle.none)),
+          borderSide: const BorderSide(
+              width: 0, style: BorderStyle.solid, color: Colors.white)),
+      enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(8.0),
+          borderSide: const BorderSide(
+              width: 0, style: BorderStyle.solid, color: Colors.white)),
     ),
     keyboardType: isPasswordType
         ? TextInputType.visiblePassword

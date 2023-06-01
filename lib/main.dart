@@ -1,5 +1,7 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:foreach_exam_gaetan_juston/routers/app_router.dart';
+import 'package:foreach_exam_gaetan_juston/services/auth_services.dart';
 import 'package:json_theme/json_theme.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -29,6 +31,19 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    // return StreamBuilder(
+    //     stream: AuthenticationService(FirebaseAuth.instance).authStateChanges,
+    //     builder: ((context, snapshot) {
+    //       if (snapshot.hasData) {
+    //         return MaterialApp.router(
+    //             routerConfig: _appRouter.config(), theme: theme);
+    //       } else {
+    //         return MaterialApp.router(
+    //           routerConfig: _appRouter.config(),
+    //           theme: theme,
+    //         );
+    //      }
+    //   }));
     return MaterialApp.router(
         routerConfig: _appRouter.config(), title: 'Flutter Demo', theme: theme);
   }

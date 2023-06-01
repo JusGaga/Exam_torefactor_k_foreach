@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-TextField reusableTextField(String label, IconData icon, bool isPasswordType,
-    TextEditingController controller) {
-  return TextField(
+TextFormField reusableTextField(String label, IconData icon,
+    bool isPasswordType, TextEditingController controller) {
+  return TextFormField(
     controller: controller,
     obscureText: isPasswordType,
     enableSuggestions: !isPasswordType,

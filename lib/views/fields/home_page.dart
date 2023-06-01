@@ -2,8 +2,8 @@ import 'package:auto_route/auto_route.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:foreach_exam_gaetan_juston/routers/app_router.gr.dart';
-import 'package:foreach_exam_gaetan_juston/services/auth_redirect.dart';
 import 'package:foreach_exam_gaetan_juston/services/auth_services.dart';
+import 'package:foreach_exam_gaetan_juston/views/fields/fields/fields.dart';
 
 @RoutePage()
 class FieldsPage extends StatefulWidget {
@@ -17,9 +17,7 @@ class _FieldsPageState extends State<FieldsPage> {
   int _selectedTab = 0;
 
   final List _pages = const [
-    Center(
-      child: Text("Home"),
-    ),
+    Center(child: Fields()),
     Center(
       child: Text("About"),
     ),

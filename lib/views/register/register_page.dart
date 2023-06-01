@@ -3,6 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:foreach_exam_gaetan_juston/components/textfields/textfields.dart';
 import 'package:foreach_exam_gaetan_juston/routers/app_router.gr.dart';
+import 'package:foreach_exam_gaetan_juston/services/auth_redirect.dart';
 import 'package:foreach_exam_gaetan_juston/services/auth_services.dart';
 
 @RoutePage()
@@ -18,7 +19,20 @@ class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController _passwordTextController = TextEditingController();
 
   @override
+  void initState() {
+    super.initState();
+    final auth = AuthenticationService(FirebaseAuth.instance);
+    auth.authStateChanges.listen((User? user) {
+      setState(() {});
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user != null) {
+      return AuthStateRedirect(user: user);
+    }
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(

@@ -9,8 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:foreach_exam_gaetan_juston/views/fields/fields_page.dart'
-    as _i3;
+import 'package:foreach_exam_gaetan_juston/views/fields/home_page.dart' as _i3;
 import 'package:foreach_exam_gaetan_juston/views/login/login_page.dart' as _i2;
 import 'package:foreach_exam_gaetan_juston/views/page_tree/page_tree.dart'
     as _i4;

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "828414048370",
+    "project_id": "foreach-torrefeacteur",
+    "storage_bucket": "foreach-torrefeacteur.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:828414048370:android:12663e44c8d89d8534aaeb",
+        "android_client_info": {
+          "package_name": "com.example.foreach_exam_gaetan_juston"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBl1rF6z7NG0o2v7UwU7zKQNY-e3i4O71w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -22,14 +22,14 @@ class AuthenticationService {
     }
   }
 
-  Future<String?> signUp(
+  Future<UserCredential?> signUp(
       {required String email, required String password}) async {
     try {
-      await _firebaseAuth.createUserWithEmailAndPassword(
+      return await _firebaseAuth.createUserWithEmailAndPassword(
           email: email, password: password);
-      return "Signed up";
     } on FirebaseAuthException catch (e) {
-      return e.message;
+      print(e.message);
     }
+    return null;
   }
 }

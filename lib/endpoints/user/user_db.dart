@@ -9,8 +9,12 @@ class UserFirestoreService {
     return snapshot.docs.map((doc) => doc.data()).toList();
   }
 
-  Future<void> addUser(Map<String, dynamic> data) async {
-    await _collectionReference.add(data);
+  Stream<DocumentSnapshot<Object?>> getUser(String userId) {
+    return _collectionReference.doc(userId).snapshots();
+  }
+
+  Future<void> addUser(Map<String, dynamic> data, userId) async {
+    await _collectionReference.doc(userId).set(data);
   }
 
   Future<void> updateUser(String userId, Map<String, dynamic> data) async {
